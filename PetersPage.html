@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+}
+// Both of these functions for menu that slides out 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("main").style.marginRight = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+  <link rel="stylesheet" href="PeterCss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo"  onclick="closeNav()">
+  <source src="C:\Users\Peter\Desktop\My Website\MoonAndSea.mov"  type="video/mp4">
+</video>
+<!-- Wikiplayer -->
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum...</p>
+</div>
+
+<div class="topright">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776; Menu</span>
+</div>
+</div>
+
+<h2 style="text-align:center"></h2>
+<div id= "locator">
+<div class="card">
+  <img src="C:\Users\Peter\Desktop\My Website\Closeup.PNG" alt="Peter" id="image" width = "200">
+  <h1 class="title">Peter Stirpe</h1>
+  <p class="title">CEO & Founder of Google</p>
+  <p class="title">University of Maryland, College Park</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.facebook.com/peter.stirpe" target="_blank"><i class="fa fa-facebook-square" id = "fix"></i></a> 
+    <a href="#"><i class="fa fa-envelope" id = "fix"></i></a> 
+    <a href="https://github.com/pmstirpe/" target="_blank"><i class="fa fa-github" id = "fix"></i></a>  
+    <a href="https://www.linkedin.com/in/peter-stirpe-6b25b8164/" target="_blank"><i class="fa fa-linkedin" id = "fix"></i></a>
+    <a href="https://soundcloud.com/peter_stirpe" target="_blank"><i class="fa fa-soundcloud" style="color:orange"  id = "fix"></i></a>  	
+ </div>
+ <p><button>Contact</button></p>
+  <p><button>Heyy</button></p>
+</div>
+</div>
+</body>
+
+</html>
