@@ -2,7 +2,6 @@
 <html>
 <head>
 <script>
-//heyhey
 // Get the video
 var video = document.getElementById("myVideo");
 
@@ -31,24 +30,42 @@ function closeNav() {
     document.getElementById("main").style.marginRight= "0";
     document.body.style.backgroundColor = "white";
 }
+
+function loadResume(){
+    var x = document.getElementById("resumeLoad");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 </script>
   <link rel="stylesheet" href="PeterCss.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+
 <!-- The video -->
 <video autoplay muted loop id="myVideo"  onclick="closeNav()">
   <source src="MoonAndSea.mov"  type="video/mp4">
-</video>
+</video> 
 <!-- Wikiplayer -->
 
+
+
+
+
 <!-- Optional: some overlay text to describe the video -->
-<div class="content">
+<!--<div class="content">
   <h1>Heading</h1>
   <p>Lorem ipsum...</p>
+<<<<<<< HEAD
+</div>   -->
+=======
   <p><button>Resume</button></p>
 </div>
+>>>>>>> 71c139027e5301459d4a0e0f5d0e9bed7e73e18a
 
 <div class="topright">
 <div id="mySidenav" class="sidenav">
@@ -64,6 +81,8 @@ function closeNav() {
 </div>
 </div>
 
+<embed class="centerForResume" id = "resumeLoad" src="PeterStirpeResume.pdf" width="900" height="800"> </embed>
+
 <h2 style="text-align:center"></h2>
 <div id= "locator">
 <div class="card">
@@ -71,6 +90,7 @@ function closeNav() {
   <h1 class="title">Peter Stirpe</h1>
   <p class="title">Computer Science</p>
   <p class="title">University of Maryland, College Park</p>
+  <button onclick="loadResume()">Resume</button>
   <div style="margin: 24px 0;">
     <a href="https://www.facebook.com/peter.stirpe" target="_blank"><i class="fa fa-facebook-square" id = "fix"></i></a> 
     <a href="#"><i class="fa fa-envelope" id = "fix"></i></a> 

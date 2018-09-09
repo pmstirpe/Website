@@ -97,6 +97,11 @@ body {
     right: 30px;
     font-size: 18px;
 }
+.centerForResume {
+	position: absolute;
+    top: 100px;
+    left: 550px;
+}
 
 .sidenav {
     height: 100%;
